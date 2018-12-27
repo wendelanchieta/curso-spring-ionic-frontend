@@ -24,11 +24,11 @@ export class StorageService {
     }
 
     getCart(): Cart{
-        let usr = localStorage.getItem(STORAGE_KEYS.cart);
-        if(usr == null){
+        let str = localStorage.getItem(STORAGE_KEYS.cart);
+        if(str == null){
             return null;        
         } else {
-            return JSON.parse(usr);
+            return JSON.parse(str);
         }
     }
 
